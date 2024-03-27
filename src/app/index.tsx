@@ -1,12 +1,33 @@
-import { View } from "react-native";
+import { useState } from "react";
+import { View, FlatList } from "react-native";
 
 import { Header } from "@/components/header";
 import { CategoryButton } from "@/components/categoryButton";
 
+import { CATEGORIES } from "@/utils/data/products";
+
 export default function Home() {
+  const [selectedCategory, setSelectedCategory] = useState(CATEGORIES[0]);
+
   return (
     <View className="flex-1 pt-8">
       <Header title="Menu" cartQuantityItems={4} />
+
+      <FlatList
+        data={CATEGORIES}
+        keyExtractor={(item) => item}
+        renderItem={({ item }) => (
+          <CategoryButton
+            title={item}
+            isSelected={selectedCategory === item}
+            onPress={() => setSelectedCategory(item)}
+          />
+        )}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        className="max-h-10 mt-5"
+        contentContainerStyle={{ gap: 12, paddingHorizontal: 20 }}
+      />
     </View>
   );
 }
