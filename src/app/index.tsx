@@ -1,6 +1,7 @@
 import { View } from "react-native";
 
 import { Header } from "@/components/header";
+import { CategoryButton } from "@/components/categoryButton";
 
 export default function Home() {
   return (
