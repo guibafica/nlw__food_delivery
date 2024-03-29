@@ -9,6 +9,8 @@ Food Delivery is a Mobile application developed in react native where the user w
 ## Libs and Techs
 
 - Expo: An open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React;
+- Nativewind (Tailwindcss): A CSS tool that has the advantage of maintaining the application's standards;
+- clsx: Lib generally used to conditionally apply a given className. Used together with Tailwindcss;
 
 # Author
 

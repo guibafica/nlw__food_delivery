@@ -90,7 +90,7 @@ const MENU = [
     data: [
       {
         id: "5",
-        title: "Sorvete com Brownie",
+        title: "Ice cream with brownie",
         price: 18.9,
         description:
           "Uma sobremesa deliciosa para saborear. Escolha o sorvete e a calda que desejar...",
