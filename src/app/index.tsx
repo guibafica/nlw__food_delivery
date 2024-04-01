@@ -34,21 +34,13 @@ export default function Home() {
         sections={MENU}
         keyExtractor={(item) => item.id}
         stickySectionHeadersEnabled={false}
-        renderItem={({ item }) => (
-          <Product
-            data={{
-              title: item.title,
-              description: item.description,
-              thumbnail: item.thumbnail,
-              quantity: 10,
-            }}
-          />
-        )}
+        renderItem={({ item }) => <Product data={item} />}
         renderSectionHeader={({ section: { title } }) => (
           <Text className="text-xl text-white font-heading mt-8 mb-3">
             {title}
           </Text>
         )}
+        className="flex-1 p-5"
       />
     </View>
   );
