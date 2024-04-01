@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 import { View, FlatList, SectionList, Text } from "react-native";
 
 import { Header } from "@/components/header";
@@ -9,6 +9,27 @@ import { CATEGORIES, MENU } from "@/utils/data/products";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState(CATEGORIES[0]);
+
+  const sectionListRef = useRef<SectionList>(null);
+
+  const handleCategorySelect = useCallback(
+    (selectedCategory: string) => {
+      setSelectedCategory(selectedCategory);
+
+      const sectionIndex = CATEGORIES.findIndex(
+        (category) => category === selectedCategory
+      );
+
+      if (sectionListRef.current) {
+        sectionListRef.current.scrollToLocation({
+          animated: true,
+          sectionIndex,
+          itemIndex: 0,
+        });
+      }
+    },
+    [sectionListRef, CATEGORIES]
+  );
 
   return (
     <View className="flex-1 pt-8">
@@ -21,7 +42,7 @@ export default function Home() {
           <CategoryButton
             title={item}
             isSelected={selectedCategory === item}
-            onPress={() => setSelectedCategory(item)}
+            onPress={() => handleCategorySelect(item)}
           />
         )}
         horizontal
@@ -31,6 +52,7 @@ export default function Home() {
       />
 
       <SectionList
+        ref={sectionListRef}
         sections={MENU}
         keyExtractor={(item) => item.id}
         stickySectionHeadersEnabled={false}
@@ -41,6 +63,8 @@ export default function Home() {
           </Text>
         )}
         className="flex-1 p-5"
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 100 }}
       />
     </View>
   );
