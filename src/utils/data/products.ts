@@ -7,7 +7,7 @@ const MENU = [
         title: "X-React",
         price: 24.9,
         description:
-          "Um hamburger tão bonito que me deu fome enquanto eu fazia esse layout para o projeto...",
+          "A burger so beautiful that it made me hungry while I was making this layout for the project...",
         cover: require("../../assets/products/cover/1.png"),
         thumbnail: require("../../assets/products/thumbnail/1.png"),
         ingredients: [
@@ -31,7 +31,7 @@ const MENU = [
         title: "X-JavaScript",
         price: 34.9,
         description:
-          "Os ingredientes desse hambúrguer mudam toda semana, então você sempre terá uma surpresa...",
+          "The ingredients in this burger change every week, so you're always in for a surprise...",
         cover: require("../../assets/products/cover/2.png"),
         thumbnail: require("../../assets/products/thumbnail/2.png"),
         ingredients: [
@@ -50,7 +50,7 @@ const MENU = [
         title: "X-Cobol",
         price: 32.7,
         description:
-          "Aquele hambúrguer que não podemos tirar do cardápio devido aos clientes mais antigos da hamburgueria...",
+          "That burger that we can't take off the menu due to the burger restaurant's oldest customers...",
         cover: require("../../assets/products/cover/3.png"),
         thumbnail: require("../../assets/products/thumbnail/3.png"),
         ingredients: [
@@ -69,7 +69,7 @@ const MENU = [
         title: "X-Tailwind",
         price: 29.9,
         description:
-          "Aquele que você não gosta de primeira, mas depois fica viciado e não consegue mais largar...",
+          "The one you don't like at first, but then you get hooked and can't put it down...",
         cover: require("../../assets/products/cover/4.png"),
         thumbnail: require("../../assets/products/thumbnail/4.png"),
         ingredients: [
@@ -93,7 +93,7 @@ const MENU = [
         title: "Ice cream with brownie",
         price: 18.9,
         description:
-          "Uma sobremesa deliciosa para saborear. Escolha o sorvete e a calda que desejar...",
+          "A delicious dessert to enjoy. Choose the ice cream and syrup you want...",
         cover: require("../../assets/products/cover/5.png"),
         thumbnail: require("../../assets/products/thumbnail/5.png"),
         ingredients: [
@@ -107,7 +107,7 @@ const MENU = [
         title: "Cupcake",
         price: 22.9,
         description:
-          "Um delicioso Cupcake para adoçar. Escolha o sabor que você gosta...",
+          "A delicious cupcake to sweeten. Choose the flavor you like...",
         cover: require("../../assets/products/cover/6.png"),
         thumbnail: require("../../assets/products/thumbnail/6.png"),
         ingredients: ["Escolha o sabor;", "Chantilly;"],
@@ -119,7 +119,7 @@ const MENU = [
     data: [
       {
         id: "7",
-        title: "Hmmm, coquinha!",
+        title: "Hmmm, Coke!",
         price: 6.9,
         thumbnail: require("../../assets/products/thumbnail/7.png"),
         cover: require("../../assets/products/cover/7.png"),

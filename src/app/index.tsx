@@ -3,6 +3,7 @@ import { View, FlatList, SectionList, Text } from "react-native";
 
 import { Header } from "@/components/header";
 import { CategoryButton } from "@/components/categoryButton";
+import { Product } from "@/components/product";
 
 import { CATEGORIES, MENU } from "@/utils/data/products";
 
@@ -34,7 +35,14 @@ export default function Home() {
         keyExtractor={(item) => item.id}
         stickySectionHeadersEnabled={false}
         renderItem={({ item }) => (
-          <Text className="text-white">{item.title}</Text>
+          <Product
+            data={{
+              title: item.title,
+              description: item.description,
+              thumbnail: item.thumbnail,
+              quantity: 10,
+            }}
+          />
         )}
         renderSectionHeader={({ section: { title } }) => (
           <Text className="text-xl text-white font-heading mt-8 mb-3">
